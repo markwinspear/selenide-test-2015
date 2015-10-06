@@ -1,0 +1,7 @@
+SELENIDE:
+
+Added one line to end of before() method... WebDriverRunner.setWebDriver(driver);
+
+Added one line to start of after() method... WebDriverRunner.setWebDriver(null);
+
+It makes Selenide use your provided instance of webdriver.
