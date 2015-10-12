@@ -1,6 +1,8 @@
 package PageObjects;
 
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebDriver;
+import static com.codeborne.selenide.Selenide.$;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
@@ -25,8 +27,9 @@ public class BasePage implements Config {
         } else {
             driver.get(baseUrl + url);
         }
-        if (mobile == false) {
+        if (!mobile) {
             driver.manage().window().maximize();
         }
     }
+
 }

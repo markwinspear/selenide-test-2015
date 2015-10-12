@@ -27,11 +27,11 @@ public class Login extends BasePage{
         submitButton.click();
     }
 
-    public void successMessagePresent() {
+    public void verifySucceeded() {
         $(By.cssSelector(".flash.success")).shouldBe(Condition.visible).shouldHave(Condition.text("You logged into a secure area! "));
     }
 
-    public void failureMessagePresent() {
+    public void verifyFailed() {
         $(By.cssSelector(".flash.error")).shouldBe(Condition.visible).shouldHave(Condition.text("Your password is invalid!"));
     }
 }

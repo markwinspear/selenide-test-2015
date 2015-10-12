@@ -28,5 +28,8 @@
         </dependency>
     </dependencies>
 
+    <properties>
+        <groups>tests.groups.All</groups>
+    </properties>
 
 </project>
