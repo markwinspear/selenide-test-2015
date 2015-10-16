@@ -1,8 +1,6 @@
 package PageObjects;
 
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebDriver;
-import static com.codeborne.selenide.Selenide.$;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
