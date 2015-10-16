@@ -1,16 +1,1 @@
-SELENIDE:
 
-Added one line to end of before() method... WebDriverRunner.setWebDriver(driver);
-
-It makes Selenide use your provided instance of webdriver.
-
-See https://github.com/selenide-examples/gmail/blob/master/test/org/selenide/examples for good examples
-  including how to wiat for something to disappear..
-    $(byText("Loading")).waitUntil(disappears), 20000);
-
-Use chrome plugin 'Selenium Page Object Generator' to create object maps
-
-Verifying options in a dropdown:
-     $$("select option").shouldHave(texts("male", "female", "unknown"));
-
-IntelliJ plug in 'Selenium' installed for Selenide
