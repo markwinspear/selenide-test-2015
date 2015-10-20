@@ -4,12 +4,13 @@ package PageObjects;
 public interface Config {
 
 String baseUrl        = System.getProperty("baseUrl", "http://the-internet.herokuapp.com"); //2nd param is the default to use
-String browser        = System.getProperty("browser", "firefox");
+String browser        = System.getProperty("browserName", ""); //e.g. firefox, Safari
 
         //to support executing using SauceLabs
 String host           = System.getProperty("host", "localhost"); //or "saucelabs" or "saucelabs-mobile"
-String browserVersion = System.getProperty("browserVersion", "33");
-String platform       = System.getProperty("platform", "Windows 8.1"); // iOS or Android for mobile or Linux for emulator
+String browserVersion = System.getProperty("browserVersion", "");
+String platform       = System.getProperty("platform", ""); //e.g. "Windows 8.1"
+String platformName       = System.getProperty("platformName", "");   // iOS or Android for mobile or Linux for emulator
 
         //to turn off screen and video capture if required. true = enabled, false = disabled
 String recordVideo    = System.getProperty("recordVideo", "true");        //defaults to record

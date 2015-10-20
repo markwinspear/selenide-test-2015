@@ -21,6 +21,14 @@ IntelliJ plug in 'Selenium' installed for Selenide
 
 Build error: http://stackoverflow.com/questions/29888592/errorjava-javactask-source-release-8-requires-target-release-1-8
 
+SELENIDE - Using actions:
+Look for example in selenide tests:
+https://github.com/codeborne/s...
+@Test public void userCanUseSeleniumActions() { $(By.name("rememberMe")).shouldNotBe(selected);
+actions().click($(By.name("rememberMe"))).build().perform();
+$(By.name("rememberMe")).shouldBe(selected); }
+
+
 To run in Chrome - open Run > Edit Configurations
 In VM options, add -Dbrowser=chrome
 
@@ -68,3 +76,4 @@ Categories set up using Maven surefire - Smoke & Deep categories can be applied 
  saucelabs tests show as "unnamed job" and don't have a "pass" or "fail"
 
  See Chapter 13 to run tests in saucelabs for applications behind a firewall
+

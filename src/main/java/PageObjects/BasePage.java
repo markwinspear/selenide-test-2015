@@ -14,9 +14,9 @@ public class BasePage implements Config {
         if (host.equals("saucelabs-mobile")) {
             mobile = TRUE;
         }
-        else {
+        else
             mobile = FALSE;
-        }
+
     }
 
     public void visit(String url) {

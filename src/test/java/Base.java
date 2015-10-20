@@ -30,7 +30,12 @@ public class Base implements Config {
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("browserName", browser);
                 capabilities.setCapability("version", browserVersion);
-                capabilities.setCapability("platform", platform);
+                if (platform != null) {                     //platform used for desktop OS
+                    capabilities.setCapability("platform", platform);
+                }
+                else {                                      //otherwise use mobile OS
+                    capabilities.setCapability("platformName", platformName);
+                }
                 capabilities.setCapability("name", testName);           //sets test name in saucelabs to the test name
                 capabilities.setCapability("recordVideo", recordVideo);
                 capabilities.setCapability("recordScreenshots", recordScreenshots);
